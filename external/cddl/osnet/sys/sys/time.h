@@ -96,7 +96,7 @@ ddi_get_lbolt64(void)
 int clock_gettime(clockid_t, struct timespec *)
     __RENAME(__clock_gettime50);
 #endif
-#ifdef __linux__
+#if defined(__linux__) || defined(__GNU__)
 #include <time.h>
 #endif
 
